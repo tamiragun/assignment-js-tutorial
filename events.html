@@ -26,7 +26,7 @@
       triggered.
     </p>
 
-    <div class="editor">
+    <div class="code-and-editor">
       <div class="code-block">
         <code>
           //Shows a text in another DOM element upon button click:
@@ -48,18 +48,11 @@
 
       <div class="editor__wrapper">
         <div class="editor__body">
-          <div class="editor__code" id="editor">
-            console.log("Hello World!");
-          </div>
+          <div class="editors" id="editor">console.log("Hello World!");</div>
         </div>
         <div class="editor__footer">
-          <div class="editor__footer--left">
-            <button class="editor__btn editor__run">Run ></button>
-            <button class="editor__btn editor__reset">Reset ></button>
-          </div>
-          <div class="editor__footer--right">
-            <div class="editor__console"></div>
-          </div>
+          <button class="editor__btn editor__run">Run</button>
+          <button class="editor__btn editor__reset">Reset</button>
         </div>
       </div>
     </div>

@@ -19,23 +19,37 @@ body {
 
 /*Editor styling*/
 
-.editor {
-  height: 100%;
+.code-and-editor {
+  height: 400px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+  padding: 2em;
+}
+
+.code-block {
+  box-sizing: border-box;
+  background-color: grey;
+  color: white;
+  padding: 1em;
+  margin-right: 1em;
+  height: 100%;
+  width: 50%;
+  overflow: auto;
+  border-radius: 3px;
 }
 
 .editor__wrapper {
-  height: 70%;
+  height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: var(--editor-bg);
   padding: 2em;
+  margin-left: 1em;
   border-radius: 3px;
   border: 1px solid #ccc;
 }
@@ -44,41 +58,7 @@ body {
   flex: 1;
 }
 
-.editor__footer {
-  display: flex;
-}
-
-.editor__footer--left {
-  display: flex;
-  flex-direction: column;
-}
-
-.editor__footer--right {
-  flex: 1;
-  margin-left: 10px;
-  overflow: hidden;
-}
-
-.editor__btn {
-  border: 0;
-  padding: 0.5em;
-  background-color: #fff;
-  border: 2px solid #333;
-  margin-top: 1em;
-  width: 100px;
-  cursor: pointer;
-}
-
-.editor__console {
-  background-color: #fff;
-  width: 100%;
-  height: 130px;
-  margin-top: 0.9em;
-  border: 1px solid var(--editor-border);
-  overflow: auto;
-}
-
-.editor__code {
+.editors {
   position: relative;
   height: 100%;
   width: 100%;
@@ -89,14 +69,26 @@ body {
   border: 1px solid var(--editor-border);
 }
 
-h1 {
-  text-align: center;
+.editor__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.code-block {
-  box-sizing: border-box;
-  background-color: grey;
-  color: white;
-  padding: 10px 20px;
-  width: 500px;
+.editor__btn {
+  border: 0;
+  padding: 0.5em;
+  background-color: #fff;
+  border: 2px solid #333;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  width: 100px;
+  cursor: pointer;
+}
+
+/*Page styling*/
+
+h1 {
+  text-align: center;
 }

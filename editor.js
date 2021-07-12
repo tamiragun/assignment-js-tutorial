@@ -21,3 +21,11 @@ executeCodeBtn.addEventListener("click", () => {
     console.error(e);
   }
 });
+
+//Clear code
+//Thanks to: https://www.youtube.com/watch?v=foQ8MjEvsJQ
+const resetCodeBtn = document.querySelector(".editor__reset");
+resetCodeBtn.addEventListener("click", () => {
+  //Clear the editor
+  editor.setValue("");
+});
