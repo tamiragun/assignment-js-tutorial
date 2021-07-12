@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic syntax</title>
+    <link href="styling.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Basic syntax</h1>
+    </header>
+
+    <h2 id="variables">Variables</h2>
+    <p>
+      In ES6, there are two ways to assign a variable: const or let. 'const'
+      means that the identifier can't be reassigned. With 'let', you can
+      reassign the variable afterwards. This makes 'const' a good candidate for
+      variables that are unlikely to need to be reassigned (this does not mean
+      that they are immatable though), and 'let' is a good candidate for
+      declaring variables in loops or mathematical algorithms.
+    </p>
+    <div class="code-block">
+      <code>
+        const name = "Tamira"; <br />
+        let car = "Hyundai";
+      </code>
+    </div>
+
+    <h2 id="conditional-statements">Conditional statements</h2>
+    <p>
+      Your basic if, else if and else statements look very similar to other
+      languages such as Java and PHP. Note that "else if" is written as two
+      separate words. Make sure the conditional is in brackets, and the
+      statement in curly brackets. End every statement with a semicolon. The AND
+      operator is a double "&&" and the OR operator is a double "||". You don't
+      need a semicolon after the curly bracket close.
+    </p>
+    <div class="code-block">
+      <code>
+        if (name === "Tamira" && car === "Hyundai") {<br />
+        &#8195; console.log("Tamira has a Hyundai.");<br />
+        }<br />
+        else if (name === "Tamira" || car === "Hyundai") {<br />
+        &#8195; console.log("Someone has a Hyundai.");<br />
+        }<br />
+        else {<br />
+        &#8195; console.log("No one has a Hyundai");<br />
+        }
+      </code>
+    </div>
+
+    <h2 id="arrays-and-loops">Arrays and loops</h2>
+    <p>
+      In JavaScript, arrays can contain elements of different types, and their
+      length can change. Arrays are declared with square brackets surrounding
+      the elements separated by commas. There are several ways to loop over an
+      array in JavaScript. You can use the basic for loop, while loop, or
+      array-specific methods such as for (x in y) and .forEach(). Below is an
+      eaxample of each method, printing the different ages of a given family's
+      family members:
+    </p>
+    <div class="code-block">
+      <code>
+        let familyAges = [12,14,43,44];<br />
+        <br />
+        for (let i=0; i &lt; familyAges.length; i++) {<br />
+        &#8195; console.log(familyAges[i]);<br />
+        }<br />
+        <br />
+        let i = 0; <br />
+        while (i &lt; familyAges.length) {<br />
+        &#8195; console.log(familyAges[i]);<br />
+        i++;<br />
+        }<br />
+        <br />
+        for (let age of familyAges) {<br />
+        &#8195; console.log(age);<br />
+        }<br />
+        <br />
+        familyAges.forEach(function(age) {<br />
+        &#8195; console.log(age);<br />
+        });<br />
+      </code>
+    </div>
+
+    <h2 id="maps">Maps</h2>
+    <p>
+      Maps are key value pairs in JavaScript. To create one, instatiate a Map
+      object and the set the keys and values on the instance of that Map object.
+      The Map class has a number of built-in functions that you can use to
+      manipulate its contents.
+    </p>
+    <div class="code-block">
+      <code>
+        let familyMembers = new Map();<br />
+        <br />
+        familyMembers.set("Mother", "Sally");<br />
+        familyMembers.set("Father", "Nkosi");<br />
+        familyMembers.set("Son", "Jason");<br />
+        familyMembers.set("Daughter", "Ungwang");<br />
+        <br />
+        //Print the keys and values: <br />
+        for (let [key, value] of familyMembers) {<br />
+        &#8195; console.log(key + ' name is ' + value);<br />
+        }<br />
+        <br />
+        for (let [key, value] of familyMembers.entries()) {<br />
+        &#8195; console.log(`${key} name is ${value}`);<br />
+        }<br />
+        <br />
+        //Print the keys only: <br />
+        for (let key of familyMembers.keys()) {<br />
+        &#8195; console.log(key);<br />
+        }<br />
+        <br />
+        //Print the values only: <br />
+        for (let value of familyMembers.values()) {<br />
+        &#8195; console.log(value);<br />
+        }<br />
+      </code>
+    </div>
+
+    <h2 id="built-in-functions">Built-in functions</h2>
+    <p>
+      JavaScript has a ton of built-in functions that allows you to get or
+      manipulate information about your objects, strings, integers, floats,
+      arrays, etc. Needless to say, Goole is your best friend here, but for now,
+      check out this curated shortlist of handy built-in functions:
+    </p>
+    <table>
+      <tr>
+        <th>Function</th>
+        <th>What it does</th>
+      </tr>
+      <tr>
+        <td>min()</td>
+        <td>Returns the smallest valued element</td>
+      </tr>
+      <tr>
+        <td>max()</td>
+        <td>Returns the largest value element</td>
+      </tr>
+      <tr>
+        <td>round()</td>
+        <td>Returns a number rounded to the nearest integer</td>
+      </tr>
+      <tr>
+        <td>toUpperCase()</td>
+        <td>Returns the given string all in upper case</td>
+      </tr>
+      <tr>
+        <td>toLowerCase()</td>
+        <td>Returns the given string in all lower case</td>
+      </tr>
+      <tr>
+        <td>charAt()</td>
+        <td>Returns a character in a string at the given index</td>
+      </tr>
+    </table>
+
+    <h2 id="user-defined-functions">User-defined functions</h2>
+    <p>
+      These built-in functions cover a lot of ground, but you will likely need
+      more custom functions for the programmes you are building. JavaScript,
+      like most other programming languages, allows you to define your own
+      functions. With ES6, there are now more ways to define functions.
+    </p>
+    <div class="code-block">
+      <code>
+        //Traditional function: <br />
+        function doubleNumber (number) {<br />
+        &#8195; return number * 2;<br />
+        }<br />
+        <br />
+        //Arrow function: <br />
+        (number) =&gt; {<br />
+        &#8195; return number * 2;<br />
+        }<br />
+        <br />
+        //Or even: <br />
+        number =&gt; number * 2;<br />
+        <br />
+        //With multiple arguments: <br />
+        (number1, number2) =&gt; number1 * number2;<br />
+        <br />
+        //With no arguments: <br />
+        () =&gt; 2 * 2;<br />
+        <br />
+        //To name your function: <br />
+        const doubleNumber = (number) =&gt; number * 2;<br />
+        <br />
+      </code>
+    </div>
+    <!--
+    <div id="editor" class="editors">console.log("Hello World!");</div>
+    <button class="editor__run">Run</button>
+    -->
+    <div class="editor">
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editor__code" id="editor">
+            console.log("Hello World!");
+          </div>
+        </div>
+        <div class="editor__footer">
+          <div class="editor__footer--left">
+            <button class="editor__btn editor__run">Run ></button>
+            <button class="editor__btn editor__reset">Reset ></button>
+          </div>
+          <div class="editor__footer--right">
+            <div class="editor__console"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

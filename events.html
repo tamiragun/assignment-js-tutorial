@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link href="styling.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Events</h1>
+    </header>
+
+    <h2 id="events">Events</h2>
+    <p>
+      The real power of JavaScript lies in its ability to render web pages
+      dynamic. One of the ways it can do this is by 'listening' to certain
+      events that might happen on the page, and then executing code specific to
+      that event.
+    </p>
+    <p>
+      Generally, you would select an element from the DOM, add an event
+      listener, and then attach a function that must execute when the event is
+      triggered.
+    </p>
+
+    <div class="editor">
+      <div class="code-block">
+        <code>
+          //Shows a text in another DOM element upon button click:
+          <br />
+          let button = document.querySelector(".btn"); <br />
+          button.addEventListener("click", () =&gt; {<br />
+          &#8195; document.getElementById("demo").innerHTML = "Hello World";<br />
+          };<br />
+          <br />
+          //You can also use the shorthand for some events:<br />
+          button.onclick = function(){<br />
+          &#8195; document.getElementById("demo").innerHTML = "Hello World";<br />
+          };<br />
+          <br />
+          //And you can even embed the script in the html:<br />
+          &lt;element onclick="myScript"&gt;<br />
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editor__code" id="editor">
+            console.log("Hello World!");
+          </div>
+        </div>
+        <div class="editor__footer">
+          <div class="editor__footer--left">
+            <button class="editor__btn editor__run">Run ></button>
+            <button class="editor__btn editor__reset">Reset ></button>
+          </div>
+          <div class="editor__footer--right">
+            <div class="editor__console"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Here's a shortlist of common events in DOM manipulation, but there are
+      many more.
+    </p>
+    <table>
+      <tr>
+        <th>Event</th>
+        <th>What it does</th>
+      </tr>
+      <tr>
+        <td>onclick</td>
+        <td>An HTML element has been clicked on</td>
+      </tr>
+      <tr>
+        <td>onmouseover</td>
+        <td>An HTML element was hovered over</td>
+      </tr>
+      <tr>
+        <td>onmouseout</td>
+        <td>Mouse cursor moves off HTML element</td>
+      </tr>
+      <tr>
+        <td>onkeydown</td>
+        <td>A keyboard button is pressed</td>
+      </tr>
+      <tr>
+        <td>onload</td>
+        <td>The HTML page has finished loading</td>
+      </tr>
+      <tr>
+        <td>onchange</td>
+        <td>Some HTML element has been modified</td>
+      </tr>
+    </table>
+
+    <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

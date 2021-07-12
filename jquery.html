@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <link href="styling.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>jQuery</h1>
+    </header>
+    <p>
+      jQuery is a JavaScript library that makes things like DOM traversal, event
+      handling, and animation simper. To use it, you need to import the jQuery
+      library. It also has a slightly different syntax than vanilla JavaScript.
+      This page covers a few of those differences.
+    </p>
+    <h2 id="functions">Functions</h2>
+    <p>
+      To write a function in jQuery, or anythingreally, start with the dollar
+      sign. The dollar sign is an alias to jQuery(), and signals that the
+      programme should use jQuery to interpret the ensuing statement.
+    </p>
+    <div class="code-block">
+      <code>
+        $(function() {<br />
+        &#8195; //jQuery events and effects go here<br />
+        );<br />
+      </code>
+    </div>
+
+    <h2 id="selectors">Selectors</h2>
+    <p>
+      Selecting a DOM element with jQuery is indeed faster and more convenient
+      than in JavaScript. Compare the syntax on the "Events" page to the syntax
+      here:
+    </p>
+    <div class="code-block">
+      <code>
+        //Element selector:<br />
+        $("h2") <br />
+        <br />
+        //ID selector:<br />
+        $("#article6") <br />
+        <br />
+        //Class selector:<br />
+        $(".container") <br />
+        <br />
+        //Select all HTML elements:<br />
+        $("*") <br />
+        <br />
+        //Select current HTML element:<br />
+        $(this) <br />
+        <br />
+        //Select button element:<br />
+        $("button") <br />
+        <br />
+        //Select all link-based elements:<br />
+        $("[href]") <br />
+      </code>
+    </div>
+
+    <h2 id="creating-and-appending-elements">
+      Creating and appending elements:
+    </h2>
+    <p>
+      You'll typically need to create an element (with the appropriate html tag)
+      and then is a separate step, attach it to some part of the DOM in order
+      for it to be rendered by the DOM.
+    </p>
+    <div class="code-block">
+      <code>
+        //Create element first:<br />
+        let newParagraph = $("&lt;p&gt;&lt;/p&gt;").text("Add this
+        paragraph.");<br />
+        <br />
+        //Append it to a DOM element:<br />
+        $("body").append(newParagraph); <br />
+      </code>
+    </div>
+    <p>
+      There are several options when it comes to creating and appending
+      elements, for example for inserting them at the beginning or at the end of
+      another element. Here's a shortlist of common built-in functions in
+      jQuery:
+    </p>
+    <table>
+      <tr>
+        <th>Function</th>
+        <th>What it does</th>
+      </tr>
+      <tr>
+        <td>remove()</td>
+        <td>Removes the selected element, including its child elements</td>
+      </tr>
+      <tr>
+        <td>val()</td>
+        <td>Sets or returns the value of a form field</td>
+      </tr>
+      <tr>
+        <td>text()</td>
+        <td>Sets or returns the text content of the selected element</td>
+      </tr>
+      <tr>
+        <td>prepend()</td>
+        <td>Inserts content at the beginning of the selected element</td>
+      </tr>
+      <tr>
+        <td>append()</td>
+        <td>Inserts content at the end of the selected element</td>
+      </tr>
+      <tr>
+        <td>before()</td>
+        <td>Inserts content after the selected HTML element</td>
+      </tr>
+      <tr>
+        <td>after()</td>
+        <td>Inserts content after the selected HTML element</td>
+      </tr>
+      <tr>
+        <td>empty()</td>
+        <td>
+          Removes the child elements from the selected element, but not the
+          element itself
+        </td>
+      </tr>
+    </table>
+
+    <h2 id="separate-scripting-files">Separate Scripting Files</h2>
+    <p>
+      To use jQuery, you'll need to import the jQuery library into your HTML
+      file. You can either download the jQuery file and link to it in your
+      project directory, like you would a css or javascript file. Or you can
+      link to a version of jQuery that is hosted on a content delivery network.
+      The actual script where you write the jQuery should ideally be in a
+      separate JavaScript file that you also link the HTML page to. This is to
+      separate your HTML, CSS and JavaScript/jQuery concerns and thus keep your
+      code readable.
+    </p>
+    <div class="code-block">
+      <code>
+        &lt;head&gt;<br />
+        &#8195; &lt;script<br />
+        &#8195; src=
+        "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;<br />
+        &#8195; &lt;/script&gt;<br />
+        &#8195; &lt;script src= "script.js" >&lt;/script &gt;<br />
+        &lt;/head&gt;<br />
+      </code>
+    </div>
+
+    <h2 id="events-and-effects">Events and effects:</h2>
+    <p>
+      Common events in jQuery include mouse events (click, double click, mouse
+      enter), keyboard events ())key press, key down, keyup) and form events
+      (submit, change, blur). The jQuery syntax for adding an event listener and
+      function is as follows:
+    </p>
+    <div class="code-block">
+      <code>
+        $("p").click(function() {<br />
+        &#8195; $("this").hide('slow');<br />
+        });<br />
+      </code>
+    </div>
+
+    <h2 id="effect-chaining">Effect chaining</h2>
+    <p>
+      With jQuery, you can chain various effects all on a single DOM element, by
+      putting a 'dot' between each effect. jQuery has som really cool effects,
+      such as hide, show, fade, slide, animate and stop. To chain these special
+      effects, follow this example:
+    </p>
+    <div class="code-block">
+      <code>
+        $("button").css("color","blue").slideDown(500).slideUp(500);<br />
+      </code>
+    </div>
+
+    <div id="editor" class="editors">console.log("Hello World!");</div>
+    <button class="editor__run">Run</button>
+
+    <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
