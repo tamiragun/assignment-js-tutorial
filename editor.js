@@ -1,11 +1,16 @@
+//Javascript file to set up and configure the ACE code editor.
+//https://ace.c9.io/
+
+//Create an Ace editor based on an HTML element with the provided ID
+
 function createEditors(input) {
-  //Select editor
+  //Create the
   var editor = ace.edit("e" + input);
 
   //Set theme
   editor.setTheme("ace/theme/kuroir");
 
-  //Set programming language
+  //Set programming language to javaScript
   editor.session.setMode("ace/mode/javascript");
 
   //Run code
@@ -32,8 +37,7 @@ function createEditors(input) {
   });
 }
 
-//createEditors("editor");
-
+//Create editors for each codeblock on each page, based on their ID e1, e2, e3, etc.
 let numberOfEditors = 12;
 let i = 1;
 
@@ -41,7 +45,7 @@ while (i <= numberOfEditors) {
   try {
     createEditors(i.toString());
   } catch (e) {
-    //keep looping to the next editor;
+    //Keep looping to the next editor;
   }
   i++;
 }

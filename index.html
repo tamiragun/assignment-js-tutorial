@@ -22,15 +22,33 @@
       <p>
         This website covers the basics of JavaScript for people who already know
         programing fundamentals. And instead of focusing on the theory, it lets
-        you jump right in and practise your skills. Pick one of these three
-        topics to get started:
+        you jump right in and practise your skills.
       </p>
-      <button type="button" id="basics">Basic syntax</button>
-      <button type="button" id="jquery">jQuery</button>
-      <button type="button" id="events">Events</button>
+      <h3>Practising your skills</h3>
+      <p>
+        Next to each code block is a mini code editor where you can put the
+        example into practise. To see your code ina ction, open your DevTools
+        console. Right click on your browser and select "inspect", then click on
+        the tab "console". The output of your statements will appear there.
+      </p>
+      <img src="/images/devTools_demo.png" alt="demo image" />
+      <p>
+        To clear the code editor, you can press the "reset" button. To clear the
+        console, right click in the console and click "Clear console".
+      </p>
+      <h3>Getting started</h3>
+      <p>To get started, click on one of these topics.</p>
+
+      <div class="buttons">
+        <button type="button" id="basics" class="button">Basic syntax</button>
+        <button type="button" id="jquery" class="button">jQuery</button>
+        <button type="button" id="events" class="button">Events</button>
+      </div>
     </main>
 
+    <!--Import JavaScript scripts-->
     <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="main.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

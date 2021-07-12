@@ -26,8 +26,10 @@
       triggered.
     </p>
 
+    <!--Section with the code example and code editor-->
     <div class="code-and-editor">
       <div class="code-block">
+        <!--The code block with examples-->
         <code>
           //Shows a text in another DOM element upon button click:
           <br />
@@ -48,9 +50,11 @@
 
       <div class="editor__wrapper">
         <div class="editor__body">
+          <!--The actual ACE editor with default text-->
           <div class="editors" id="e1">console.log("Hello World!");</div>
         </div>
         <div class="editor__footer">
+          <!--The Run and reset buttons-->
           <button class="editor__btn editor__run" id="br1">Run</button>
           <button class="editor__btn editor__reset" id="bc1">Reset</button>
         </div>
@@ -92,7 +96,15 @@
       </tr>
     </table>
 
+    <div class="buttons">
+      <button type="button" id="home" class="button">Home</button>
+      <button type="button" id="basics" class="button">Basic syntax</button>
+      <button type="button" id="jquery" class="button">jQuery</button>
+    </div>
+
+    <!--Import JavaScript scripts-->
     <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="main.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

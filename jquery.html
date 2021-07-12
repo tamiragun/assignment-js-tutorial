@@ -25,8 +25,10 @@
       programme should use jQuery to interpret the ensuing statement.
     </p>
 
+    <!--Section with the code example and code editor-->
     <div class="code-and-editor">
       <div class="code-block">
+        <!--The code block with examples-->
         <code>
           $(function() {<br />
           &#8195; //jQuery events and effects go here<br />
@@ -36,9 +38,11 @@
 
       <div class="editor__wrapper">
         <div class="editor__body">
+          <!--The actual ACE editor with default text-->
           <div class="editors" id="e7">console.log("Hello World!");</div>
         </div>
         <div class="editor__footer">
+          <!--The Run and reset buttons-->
           <button class="editor__btn editor__run" id="br7">Run</button>
           <button class="editor__btn editor__reset" id="bc7">Reset</button>
         </div>
@@ -90,7 +94,7 @@
     </div>
 
     <h2 id="creating-and-appending-elements">
-      Creating and appending elements:
+      Creating and appending elements
     </h2>
     <p>
       You'll typically need to create an element (with the appropriate html tag)
@@ -169,7 +173,7 @@
       </tr>
     </table>
 
-    <h2 id="separate-scripting-files">Separate Scripting Files</h2>
+    <h2 id="separate-scripting-files">Separate scripting files</h2>
     <p>
       To use jQuery, you'll need to import the jQuery library into your HTML
       file. You can either download the jQuery file and link to it in your
@@ -205,7 +209,7 @@
       </div>
     </div>
 
-    <h2 id="events-and-effects">Events and effects:</h2>
+    <h2 id="events-and-effects">Events and effects</h2>
     <p>
       Common events in jQuery include mouse events (click, double click, mouse
       enter), keyboard events ())key press, key down, keyup) and form events
@@ -259,7 +263,15 @@
       </div>
     </div>
 
+    <div class="buttons">
+      <button type="button" id="home" class="button">Home</button>
+      <button type="button" id="basics" class="button">Basic syntax</button>
+      <button type="button" id="events" class="button">Events</button>
+    </div>
+
+    <!--Import JavaScript scripts-->
     <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="main.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

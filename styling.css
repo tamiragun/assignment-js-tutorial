@@ -14,13 +14,13 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*Editor styling*/
+/*Thanks to https://www.youtube.com/watch?v=04DNiqIt1iU*/
 .code-and-editor {
-  height: 400px;
+  height: 350px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,7 +34,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2em;
+  padding: 1.2em 0;
 }
 
 .code-block {
@@ -48,6 +48,8 @@ body {
   width: 50%;
   overflow: auto;
   border-radius: 3px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .editor__wrapper {
@@ -68,6 +70,8 @@ body {
   margin-left: 1em;
   border-radius: 3px;
   border: 1px solid #ccc;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .editor__body {
@@ -115,5 +119,87 @@ body {
 /*Page styling*/
 h1 {
   text-align: center;
+}
+
+body {
+  padding: 3em;
+  margin-bottom: 50px;
+}
+
+h1,
+h2,
+h3 {
+  padding: 1em 0;
+}
+
+p {
+  padding: 0.5em 0;
+}
+
+img {
+  max-width: 1500px;
+  padding-right: 1em;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5em;
+  background-color: #fff;
+  border: 2px solid #333;
+  margin: 2em 1em 0 1em;
+  width: 150px;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #e8e9e8;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*Table styling*/
+table {
+  border-collapse: collapse;
+  margin: 35px 0;
+  min-width: 400px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+thead tr {
+  background-color: #009879;
+  color: #ffffff;
+}
+
+th,
+td {
+  padding: 12px 35px 12px 15px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tr:nth-of-type(even) {
+  background-color: #f3f3f3;
 }
 /*# sourceMappingURL=styling.css.map */
