@@ -22,11 +22,24 @@
       that they are immatable though), and 'let' is a good candidate for
       declaring variables in loops or mathematical algorithms.
     </p>
-    <div class="code-block">
-      <code>
-        const name = "Tamira"; <br />
-        let car = "Hyundai";
-      </code>
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          const name = "Tamira"; <br />
+          let car = "Hyundai";
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e2">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br2">Run</button>
+          <button class="editor__btn editor__reset" id="bc2">Reset</button>
+        </div>
+      </div>
     </div>
 
     <h2 id="conditional-statements">Conditional statements</h2>
@@ -38,18 +51,31 @@
       operator is a double "&&" and the OR operator is a double "||". You don't
       need a semicolon after the curly bracket close.
     </p>
-    <div class="code-block">
-      <code>
-        if (name === "Tamira" && car === "Hyundai") {<br />
-        &#8195; console.log("Tamira has a Hyundai.");<br />
-        }<br />
-        else if (name === "Tamira" || car === "Hyundai") {<br />
-        &#8195; console.log("Someone has a Hyundai.");<br />
-        }<br />
-        else {<br />
-        &#8195; console.log("No one has a Hyundai");<br />
-        }
-      </code>
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          if (name === "Tamira" && car === "Hyundai") {<br />
+          &#8195; console.log("Tamira has a Hyundai.");<br />
+          }<br />
+          else if (name === "Tamira" || car === "Hyundai") {<br />
+          &#8195; console.log("Someone has a Hyundai.");<br />
+          }<br />
+          else {<br />
+          &#8195; console.log("No one has a Hyundai");<br />
+          }
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e3">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br3">Run</button>
+          <button class="editor__btn editor__reset" id="bc3">Reset</button>
+        </div>
+      </div>
     </div>
 
     <h2 id="arrays-and-loops">Arrays and loops</h2>
@@ -62,28 +88,41 @@
       eaxample of each method, printing the different ages of a given family's
       family members:
     </p>
-    <div class="code-block">
-      <code>
-        let familyAges = [12,14,43,44];<br />
-        <br />
-        for (let i=0; i &lt; familyAges.length; i++) {<br />
-        &#8195; console.log(familyAges[i]);<br />
-        }<br />
-        <br />
-        let i = 0; <br />
-        while (i &lt; familyAges.length) {<br />
-        &#8195; console.log(familyAges[i]);<br />
-        i++;<br />
-        }<br />
-        <br />
-        for (let age of familyAges) {<br />
-        &#8195; console.log(age);<br />
-        }<br />
-        <br />
-        familyAges.forEach(function(age) {<br />
-        &#8195; console.log(age);<br />
-        });<br />
-      </code>
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          let familyAges = [12,14,43,44];<br />
+          <br />
+          for (let i=0; i &lt; familyAges.length; i++) {<br />
+          &#8195; console.log(familyAges[i]);<br />
+          }<br />
+          <br />
+          let i = 0; <br />
+          while (i &lt; familyAges.length) {<br />
+          &#8195; console.log(familyAges[i]);<br />
+          i++;<br />
+          }<br />
+          <br />
+          for (let age of familyAges) {<br />
+          &#8195; console.log(age);<br />
+          }<br />
+          <br />
+          familyAges.forEach(function(age) {<br />
+          &#8195; console.log(age);<br />
+          });<br />
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e4">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br4">Run</button>
+          <button class="editor__btn editor__reset" id="bc4">Reset</button>
+        </div>
+      </div>
     </div>
 
     <h2 id="maps">Maps</h2>
@@ -93,34 +132,47 @@
       The Map class has a number of built-in functions that you can use to
       manipulate its contents.
     </p>
-    <div class="code-block">
-      <code>
-        let familyMembers = new Map();<br />
-        <br />
-        familyMembers.set("Mother", "Sally");<br />
-        familyMembers.set("Father", "Nkosi");<br />
-        familyMembers.set("Son", "Jason");<br />
-        familyMembers.set("Daughter", "Ungwang");<br />
-        <br />
-        //Print the keys and values: <br />
-        for (let [key, value] of familyMembers) {<br />
-        &#8195; console.log(key + ' name is ' + value);<br />
-        }<br />
-        <br />
-        for (let [key, value] of familyMembers.entries()) {<br />
-        &#8195; console.log(`${key} name is ${value}`);<br />
-        }<br />
-        <br />
-        //Print the keys only: <br />
-        for (let key of familyMembers.keys()) {<br />
-        &#8195; console.log(key);<br />
-        }<br />
-        <br />
-        //Print the values only: <br />
-        for (let value of familyMembers.values()) {<br />
-        &#8195; console.log(value);<br />
-        }<br />
-      </code>
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          let familyMembers = new Map();<br />
+          <br />
+          familyMembers.set("Mother", "Sally");<br />
+          familyMembers.set("Father", "Nkosi");<br />
+          familyMembers.set("Son", "Jason");<br />
+          familyMembers.set("Daughter", "Ungwang");<br />
+          <br />
+          //Print the keys and values: <br />
+          for (let [key, value] of familyMembers) {<br />
+          &#8195; console.log(key + ' name is ' + value);<br />
+          }<br />
+          <br />
+          for (let [key, value] of familyMembers.entries()) {<br />
+          &#8195; console.log(`${key} name is ${value}`);<br />
+          }<br />
+          <br />
+          //Print the keys only: <br />
+          for (let key of familyMembers.keys()) {<br />
+          &#8195; console.log(key);<br />
+          }<br />
+          <br />
+          //Print the values only: <br />
+          for (let value of familyMembers.values()) {<br />
+          &#8195; console.log(value);<br />
+          }<br />
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e5">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br5">Run</button>
+          <button class="editor__btn editor__reset" id="bc5">Reset</button>
+        </div>
+      </div>
     </div>
 
     <h2 id="built-in-functions">Built-in functions</h2>
@@ -168,51 +220,42 @@
       like most other programming languages, allows you to define your own
       functions. With ES6, there are now more ways to define functions.
     </p>
-    <div class="code-block">
-      <code>
-        //Traditional function: <br />
-        function doubleNumber (number) {<br />
-        &#8195; return number * 2;<br />
-        }<br />
-        <br />
-        //Arrow function: <br />
-        (number) =&gt; {<br />
-        &#8195; return number * 2;<br />
-        }<br />
-        <br />
-        //Or even: <br />
-        number =&gt; number * 2;<br />
-        <br />
-        //With multiple arguments: <br />
-        (number1, number2) =&gt; number1 * number2;<br />
-        <br />
-        //With no arguments: <br />
-        () =&gt; 2 * 2;<br />
-        <br />
-        //To name your function: <br />
-        const doubleNumber = (number) =&gt; number * 2;<br />
-        <br />
-      </code>
-    </div>
-    <!--
-    <div id="editor" class="editors">console.log("Hello World!");</div>
-    <button class="editor__run">Run</button>
-    -->
-    <div class="editor">
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          //Traditional function: <br />
+          function doubleNumber (number) {<br />
+          &#8195; return number * 2;<br />
+          }<br />
+          <br />
+          //Arrow function: <br />
+          (number) =&gt; {<br />
+          &#8195; return number * 2;<br />
+          }<br />
+          <br />
+          //Or even: <br />
+          number =&gt; number * 2;<br />
+          <br />
+          //With multiple arguments: <br />
+          (number1, number2) =&gt; number1 * number2;<br />
+          <br />
+          //With no arguments: <br />
+          () =&gt; 2 * 2;<br />
+          <br />
+          //To name your function: <br />
+          const doubleNumber = (number) =&gt; number * 2;<br />
+          <br />
+        </code>
+      </div>
+
       <div class="editor__wrapper">
         <div class="editor__body">
-          <div class="editor__code" id="editor">
-            console.log("Hello World!");
-          </div>
+          <div class="editors" id="e6">console.log("Hello World!");</div>
         </div>
         <div class="editor__footer">
-          <div class="editor__footer--left">
-            <button class="editor__btn editor__run">Run ></button>
-            <button class="editor__btn editor__reset">Reset ></button>
-          </div>
-          <div class="editor__footer--right">
-            <div class="editor__console"></div>
-          </div>
+          <button class="editor__btn editor__run" id="br6">Run</button>
+          <button class="editor__btn editor__reset" id="bc6">Reset</button>
         </div>
       </div>
     </div>

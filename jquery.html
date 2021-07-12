@@ -24,12 +24,25 @@
       sign. The dollar sign is an alias to jQuery(), and signals that the
       programme should use jQuery to interpret the ensuing statement.
     </p>
-    <div class="code-block">
-      <code>
-        $(function() {<br />
-        &#8195; //jQuery events and effects go here<br />
-        );<br />
-      </code>
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          $(function() {<br />
+          &#8195; //jQuery events and effects go here<br />
+          );<br />
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e7">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br7">Run</button>
+          <button class="editor__btn editor__reset" id="bc7">Reset</button>
+        </div>
+      </div>
     </div>
 
     <h2 id="selectors">Selectors</h2>
@@ -38,29 +51,42 @@
       than in JavaScript. Compare the syntax on the "Events" page to the syntax
       here:
     </p>
-    <div class="code-block">
-      <code>
-        //Element selector:<br />
-        $("h2") <br />
-        <br />
-        //ID selector:<br />
-        $("#article6") <br />
-        <br />
-        //Class selector:<br />
-        $(".container") <br />
-        <br />
-        //Select all HTML elements:<br />
-        $("*") <br />
-        <br />
-        //Select current HTML element:<br />
-        $(this) <br />
-        <br />
-        //Select button element:<br />
-        $("button") <br />
-        <br />
-        //Select all link-based elements:<br />
-        $("[href]") <br />
-      </code>
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          //Element selector:<br />
+          $("h2") <br />
+          <br />
+          //ID selector:<br />
+          $("#article6") <br />
+          <br />
+          //Class selector:<br />
+          $(".container") <br />
+          <br />
+          //Select all HTML elements:<br />
+          $("*") <br />
+          <br />
+          //Select current HTML element:<br />
+          $(this) <br />
+          <br />
+          //Select button element:<br />
+          $("button") <br />
+          <br />
+          //Select all link-based elements:<br />
+          $("[href]") <br />
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e8">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br8">Run</button>
+          <button class="editor__btn editor__reset" id="bc8">Reset</button>
+        </div>
+      </div>
     </div>
 
     <h2 id="creating-and-appending-elements">
@@ -71,16 +97,30 @@
       and then is a separate step, attach it to some part of the DOM in order
       for it to be rendered by the DOM.
     </p>
-    <div class="code-block">
-      <code>
-        //Create element first:<br />
-        let newParagraph = $("&lt;p&gt;&lt;/p&gt;").text("Add this
-        paragraph.");<br />
-        <br />
-        //Append it to a DOM element:<br />
-        $("body").append(newParagraph); <br />
-      </code>
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          //Create element first:<br />
+          let newParagraph = $("&lt;p&gt;&lt;/p&gt;").text("Add this
+          paragraph.");<br />
+          <br />
+          //Append it to a DOM element:<br />
+          $("body").append(newParagraph); <br />
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e9">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br9">Run</button>
+          <button class="editor__btn editor__reset" id="bc9">Reset</button>
+        </div>
+      </div>
     </div>
+
     <p>
       There are several options when it comes to creating and appending
       elements, for example for inserting them at the beginning or at the end of
@@ -140,16 +180,29 @@
       separate your HTML, CSS and JavaScript/jQuery concerns and thus keep your
       code readable.
     </p>
-    <div class="code-block">
-      <code>
-        &lt;head&gt;<br />
-        &#8195; &lt;script<br />
-        &#8195; src=
-        "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;<br />
-        &#8195; &lt;/script&gt;<br />
-        &#8195; &lt;script src= "script.js" >&lt;/script &gt;<br />
-        &lt;/head&gt;<br />
-      </code>
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          &lt;head&gt;<br />
+          &#8195; &lt;script<br />
+          &#8195; src=
+          "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;<br />
+          &#8195; &lt;/script&gt;<br />
+          &#8195; &lt;script src= "script.js" >&lt;/script &gt;<br />
+          &lt;/head&gt;<br />
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e10">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br10">Run</button>
+          <button class="editor__btn editor__reset" id="bc10">Reset</button>
+        </div>
+      </div>
     </div>
 
     <h2 id="events-and-effects">Events and effects:</h2>
@@ -159,12 +212,25 @@
       (submit, change, blur). The jQuery syntax for adding an event listener and
       function is as follows:
     </p>
-    <div class="code-block">
-      <code>
-        $("p").click(function() {<br />
-        &#8195; $("this").hide('slow');<br />
-        });<br />
-      </code>
+
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          $("p").click(function() {<br />
+          &#8195; $("this").hide('slow');<br />
+          });<br />
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e11">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br11">Run</button>
+          <button class="editor__btn editor__reset" id="bc11">Reset</button>
+        </div>
+      </div>
     </div>
 
     <h2 id="effect-chaining">Effect chaining</h2>
@@ -174,14 +240,24 @@
       such as hide, show, fade, slide, animate and stop. To chain these special
       effects, follow this example:
     </p>
-    <div class="code-block">
-      <code>
-        $("button").css("color","blue").slideDown(500).slideUp(500);<br />
-      </code>
-    </div>
 
-    <div id="editor" class="editors">console.log("Hello World!");</div>
-    <button class="editor__run">Run</button>
+    <div class="code-and-editor">
+      <div class="code-block">
+        <code>
+          $("button").css("color","blue").slideDown(500).slideUp(500);<br />
+        </code>
+      </div>
+
+      <div class="editor__wrapper">
+        <div class="editor__body">
+          <div class="editors" id="e12">console.log("Hello World!");</div>
+        </div>
+        <div class="editor__footer">
+          <button class="editor__btn editor__run" id="br12">Run</button>
+          <button class="editor__btn editor__reset" id="bc12">Reset</button>
+        </div>
+      </div>
+    </div>
 
     <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="editor.js" type="text/javascript" charset="utf-8"></script>
